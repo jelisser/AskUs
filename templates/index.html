@@ -1,61 +1,39 @@
-
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <title>Python Websockets Chat Demo</title>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="static/css/application.css" rel="stylesheet" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Python Websockets Chat Demo</h1>
+        <hr />
+        <p>This is a Python WebSockets Chat Demo. The code lives <a href="https://github.com/heroku-examples/python-websockets-chat">on GitHub</a>. </p>
+        <p>You can find the full guide in <a href="https://devcenter.heroku.com/articles/python-websockets">Heroku DevCenter</a>.</p>
+      </div>
+      <form id="input-form" class="form-inline">
+        <div class="form-group">
+          <input id="input-handle" type="text" class="form-control" placeholder="Enter handle" autofocus />
+        </div>
+        <div class="form-group">
+          <input id="input-text" type="text" class="form-control" placeholder="Enter chat text here!" autofocus />
+        </div>
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+      <div class="page-header">
+        <h1>Chat Log</h1>
+      </div>
+      <div id="chat-text">
+      </div>
+    </div>
 
-    <head>
-    
-        <meta name="viewport" content="width=device-width, inital-scale=1.0">
-	   <title>AskUs Home</title>
-	   <link href="static/css/bootstrap.min.css" rel="stylesheet">
-	   <link href="static/css/custom.css" rel="stylesheet">
-    
-    </head>
-    
-    <body class="bg-faded">
-        
-        <nav class="navbar navbar-inverse navbar-toggleable-sm" id="mainNav">
-      
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#mainMenuCollapse" aria-controls="myContent" aria-expanded="false" aria-label="Toggle Navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <a href="index.html" class="navbar-brand">AskUs</a>
-            <div class="collapse navbar-collapse" id="mainMenuCollapse">
-                <div class="nav-link text-lowercase font-italic" style="color:white;">21st Century Library Chat Service</div>
-                <div class="navbar-nav justify-content-end ml-auto">
-                    <div>
-                    <button class="btn btn-outline-white active" role="button" type="button" href="librarian-login.html" onclick="location.href='\librarian-login.html';">Librarian Login</button>
-                    </div>
-                </div><!-- navbar-nav -->
-            </div><!-- navbar-nav collapse -->
-        </nav><!-- nav -->
-        
-        <header class="jumbotron jumbotron-fluid bg-faded">
-            <div class="container">
-                <h1 class="display1">Welcome to AskUs.</h1>
-                <p class="lead">We're a service that allows patrons like you to get online help from your librarians. </p> 
-                <p> Whether you have a simple question like what your library's hours are to more complicated research questions like the daily lives of peasants in medieval France, we've got you covered. </p>
-                <p>You can chat with one of our librarians live at any time!</p>
-		<p style="font-weight: bold"> Type your question in the following text box and hit the AskUs! button to get started:</p>
-                <form style="text-align: center" id="askForm" aria-label="AskUs Question Form">
-                    <!--label>Ask us...</label-->
-                    <br />
-                    <textarea style="text-align: left" id="patronQuestion" aria-label="Question Text Form"></textarea>
-                    <br />
-                    <!-- note: below there is a js script that is supposed to save question and load chat page for user with the question saved there however it is labeled as a 'submit' type which means that the link is not enabled. Not sure how this interacts with python so we can do this. (did work in Axure though) -->
-                    <button class="btn btn-outline-info active btn-lg" role="button" type="sbmit" onclick="location.href='\chat.html';" id="askqbutton">AskUs!</button>
-                </form><!-- submit question or askform -->
-            </div>
-        </header><!-- jumbotron text-->
-    
-    
-    
-        <!-- Javascript Files -->
-<script src="js/respond.js"></script>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-        
-    </body>
-    
+    <a href="https://github.com/heroku-examples/python-websockets-chat"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+    <script type="text/javascript" src="static/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="static/js/reconnecting-websocket.min.js"></script>
+    <script type="text/javascript" src="static/js/application.js"></script>
+  </body>
 </html>
-</DOCTYPE>
